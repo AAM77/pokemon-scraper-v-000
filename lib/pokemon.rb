@@ -16,6 +16,6 @@ class Pokemon
   end #find
   
   def alter_hp(hp, db)
-    db.execute("UPDATE pokemon SET hp=?", hp)
+    db.execute("UPDATE pokemon SET hp=? WHERE id=?", hp)
   end #alter_hp
 end
