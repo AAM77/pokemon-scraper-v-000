@@ -19,7 +19,7 @@ class Pokemon
     Pokemon.new(id: pokemon_details[0], name: pokemon_details[1], type: pokemon_details[2], hp: pokemon_details[3], db: db)
   end #find
   
-  def alter_hp(hp:, db )
+  def alter_hp(hp, db )
     db.execute()
   end #alter_hp
 end
