@@ -4,9 +4,10 @@ class Pokemon
   
   @@all = []
   
-  def initialize(id:, name:, type:, hp: nil, db:)
-    @id, @name, @type, @hp, @db = id, name, type, hp, db
-  end
+  def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
+    @@all << self
+  end #initialize
   
   def self.all
     @@all
@@ -21,7 +22,6 @@ class Pokemon
   end #save
   
   def self.find(id, db)
-    db.execute("SELECT * FROM pokemon WHERE id=?", id).flatten
-    Pokemon.new(id: pokemon_info[0], name: pokemon_info[1], type: pokemon_info[2], hp: pokemon_info[3], db: db)
+    db.execute("SELECT * FROM pokemon WHERE id=?", id)
   end #find
 end
