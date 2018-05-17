@@ -4,7 +4,6 @@ class Pokemon
 
   def initialize(attributes)
     attributes.each {|key, value| self.send(("#{key}="), value)}
-    db.execute("UPDATE pokemon SET hp=60")
   end #initialize
   
   def self.save(name, type, db)
