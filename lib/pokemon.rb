@@ -4,11 +4,6 @@ class Pokemon
 
   def initialize(id:, name:, type:, hp: nil, db:)
     attributes.each {|key, value| self.send(("#{key}="), value)
-    @id = id
-    @name = name
-    @type = type
-    @hp = hp
-    @db = db
   end #initialize
   
   def self.save(name, type, db)
