@@ -9,9 +9,7 @@ class Pokemon
     @name = name
     @type = type
     @hp = hp
-    @db = db, @name, @type, @hp, @db = id, name, type, hp, db
-    attributes.each {|key, value| self.send(("#{key}="), value)}
-    @@all << self
+    @db = db
   end #initialize
   
   def self.all
