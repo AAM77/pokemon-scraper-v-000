@@ -3,7 +3,7 @@ class Pokemon
   attr_accessor :id, :name, :type, :hp, :db
 
   def initialize(attributes)
-    attributes.each {|key, value| }
+    attributes.each {|key, value| self.send(("#{key}="), value)}
   end #initialize
   
   def self.save(name, type, db)
