@@ -20,6 +20,6 @@ class Pokemon
   end #find
   
   def alter_hp(hp:, db )
-    
+    db.execute()
   end #alter_hp
 end
