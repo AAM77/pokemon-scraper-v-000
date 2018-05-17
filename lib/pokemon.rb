@@ -4,7 +4,7 @@ class Pokemon
   
   @@all = []
   
-  def initialize(id:, name:, type:, hp: nil, deb:)
+  def initialize(id:, name:, type:, hp: nil, db:)
     attributes.each {|key, value| self.send(("#{key}="), value)}
     @@all << self
   end #initialize
