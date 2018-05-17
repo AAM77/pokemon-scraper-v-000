@@ -20,4 +20,5 @@ class Pokemon
   end #find
   
   def alter_hp
+  end #alter_hp
 end
